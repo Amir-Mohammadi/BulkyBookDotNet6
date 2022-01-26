@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace BulkyBookWeb.Models
 {
@@ -9,6 +10,7 @@ namespace BulkyBookWeb.Models
         [Required]
         public string Name { get; set; }
         public int DisplayOrder { get; set; }
+        [DisplayName("DisplayOrder")]
         public DateTime CreatedDateTime { get; set; } = DateTime.Now;
     }
 }
